@@ -1,0 +1,15 @@
+
+@use './../../assets/styles/abstracts/variables' as *;
+.button--primary{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 3px;
+  border:none;
+  outline: none;
+  background-color:$primaryYellow;
+  width: 220px;
+  font-weight: 500;
+  height: 55px;
+  font-size: 19px;
+}

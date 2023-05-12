@@ -1,0 +1,31 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  .psedo-layout {
+    height: 98vh;
+    max-width: 1620px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 290px auto 108px;
+    // margin: 50px 22px 20px 0px;
+    gap: 0px;
+    overflow-y: scroll;
+    @media only screen and (max-width: 1290px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .main-content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      overflow-y: scroll;
+      @media only screen and (max-width: 1290px) {
+        width: 100%;
+      }
+    }
+  }
+}
+.sidebar-open {
+  grid-column-start: span 2;
+}

@@ -1,0 +1,12 @@
+@import './../../assets/styles/abstracts/';
+.info-item {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  p {
+    display: inline-block;
+    background-color: $primaryYellow;
+    padding: 2px 7px;
+  }
+}

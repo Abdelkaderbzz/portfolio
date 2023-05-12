@@ -1,0 +1,29 @@
+@import './../../../../assets/styles/abstracts/';
+.plans {
+  .plans-title {
+    margin-top: 70px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 32px;
+  }
+  .plans-description {
+    font-weight: 400;
+    font-size: 15px;
+    color: $primaryGray;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .plans-cards {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+}

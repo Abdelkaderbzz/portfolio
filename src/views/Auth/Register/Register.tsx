@@ -120,7 +120,7 @@ const Register = () => {
               name='password'
               handleChange={formik.handleChange}
               value={formik.values.password}
-              type='text'
+              type='password'
               labelValue={'Password*'}
               pHolderValue={'Enter your password'}
               handleBlur={formik.handleBlur}
@@ -137,7 +137,7 @@ const Register = () => {
               name='confirmPassword'
               handleChange={formik.handleChange}
               value={formik.values.confirmPassword}
-              type='text'
+              type='password'
               labelValue={'ConfirmPassword*'}
               pHolderValue={'confirm your password'}
               handleBlur={formik.handleBlur}

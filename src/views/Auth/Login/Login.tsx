@@ -89,7 +89,7 @@ const Login = () =>
               name='password'
               handleChange={formik.handleChange}
               value={formik.values.password}
-              type='text'
+              type='password'
               labelValue={'Password*'}
               pHolderValue={'Enter your password'}
               handleBlur={formik.handleBlur}

@@ -9,7 +9,7 @@ const appAxios = axios.create({
     // import.meta.env.NODE_ENV === 'production'
     //       ? import.meta.env.VITE_REACT_APP_API_URL_PROD
     //       : import.meta.env.VITE_REACT_APP_API_URL_DEV,
-  headers,
+  headers, 
 })
 
 export default appAxios

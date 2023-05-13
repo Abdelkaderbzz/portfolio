@@ -3,10 +3,12 @@ import { lazy, Suspense } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Home from './../views/Home'
-import Register from './../views/Auth/Register'
-import Login from './../views/Auth/Login'
+const Login = lazy(() => import('./../views/Auth/Login'))
+const Register = lazy(() => import('./../views/Auth/Register'))
 import NotFound from './../views/NotFound'
-import MainLayout from '../layouts/MainLayout'
+
+const MainLayout = lazy(() => import('../layouts/MainLayout'))
+
 import Service from '../views/Home/components/Service/Service'
 import Progress from '../components/Progress'
 import AuthGuard from '../components/AuthGuard/AuthGuard'
@@ -15,6 +17,7 @@ import { RootState } from '../store'
 import { setAuth, SignupState } from '../store/auth/authSlice'
 import { getTokenFromLocalStorage } from '../helpers/logalStorage'
 import { useEffect } from 'react'
+
 const RoutesProvider = () => {
   const dispatch = useDispatch()
   const token = getTokenFromLocalStorage()
@@ -28,7 +31,7 @@ const RoutesProvider = () => {
   }, [])
   return (
     <BrowserRouter>
-      <Suspense fallback={<h1>loading...</h1>}>
+      <Suspense fallback={<Progress/>}>
         <Routes>
           <Route
             path='/auth/register'

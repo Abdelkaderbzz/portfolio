@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../store/index'
 import { setAuth, SignupState } from '../store/auth/authSlice'
 export const setTokenToLocalStorage = (value: string) => {
   localStorage.setItem('JWT_TOKEN', value)

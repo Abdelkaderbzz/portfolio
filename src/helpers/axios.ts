@@ -5,9 +5,10 @@ export const headers = {
   'Content-Type': 'application/json',
 }
 const appAxios = axios.create({
-  baseURL: import.meta.env.NODE_ENV === 'production'
-          ? import.meta.env.VITE_REACT_APP_API_URL_PROD
-          : import.meta.env.VITE_REACT_APP_API_URL_DEV,
+  baseURL:import.meta.env.VITE_REACT_APP_API_URL_PROD,
+    // import.meta.env.NODE_ENV === 'production'
+    //       ? import.meta.env.VITE_REACT_APP_API_URL_PROD
+    //       : import.meta.env.VITE_REACT_APP_API_URL_DEV,
   headers,
 })
 

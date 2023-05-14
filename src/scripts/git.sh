@@ -32,4 +32,10 @@ remote=$(git remote | head -n1)
 branch=$(git symbolic-ref --short HEAD)
 git push -u $remote $branch
 
-echo "You pushed in $branch from $remote successfully"
+if [ $? -eq 0 ]; then
+  # if the exit status is 0, the push was successful
+  echo -e "\033[32mPush successful!\033[0m"
+else
+  # if the exit status is not 0, the push failed
+  echo -e "\033[31mPush failed.\033[0m"
+fi

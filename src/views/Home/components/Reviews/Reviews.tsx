@@ -1,9 +1,5 @@
 import { AiFillStar } from 'react-icons/ai'
-import Reviewer1 from './../../../../assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg'
-import Reviewer2 from './../../../../assets/images/ethan-hoover-0YHIlxeCuhg-unsplash.jpg'
-import Reviewer3 from './../../../../assets/images/jonas-kakaroto-mjRwhvqEC0U-unsplash.jpg'
-import Reviewer4 from './../../../../assets/images/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg'
-import { useState } from 'react'
+import { BsPersonCircle } from 'react-icons/bs'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -20,7 +16,11 @@ const reviews: Review[] = [
   {
     clientName: 'James Gouse',
     job: 'Graphic Designer',
-    photo: Reviewer2,
+    photo: (
+      <BsPersonCircle
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
+      />
+    ),
     content:
       'op notch development by a very talented team. Spot on communication and on-time delivery. Highly recommended.',
     title: 'Amazing Work',
@@ -28,7 +28,11 @@ const reviews: Review[] = [
   {
     clientName: 'Tiana Philips',
     job: 'Photographer',
-    photo: Reviewer1,
+    photo: (
+      <BsPersonCircle
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
+      />
+    ),
     content:
       'All good as always Cameron was responsive, super professional & proactive, thank you!',
     title: 'this man is incredible',
@@ -36,7 +40,11 @@ const reviews: Review[] = [
   {
     clientName: 'Iyad Sebai',
     job: 'entrepreneur',
-    photo: Reviewer4,
+    photo: (
+      <BsPersonCircle
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
+      />
+    ),
     content:
       'It was amazing working with these guys! Our project had some very tricky requirements ',
     title: 'that is awesome work',
@@ -44,7 +52,11 @@ const reviews: Review[] = [
   {
     clientName: 'Ayoub Jemai',
     job: 'youtuber',
-    photo: Reviewer3,
+    photo: (
+      <BsPersonCircle
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
+      />
+    ),
     content: 'Great coding! Fast and attentive to our needs Thank you',
     title: 'Excellent',
   },
@@ -103,22 +115,17 @@ const Reviews = () => {
           {reviews.map((item, index) => {
             return (
               <div key={index} className='review-content'>
-                <div className='reviewer-paragraph'>
-
-                {IconRepeat()}
-                <h2>{item.title}</h2>
-                <p>"{item.content}"</p>
+                <div
+                  className='reviewer-paragraph'
+                >
+                  {IconRepeat()}
+                  <h2>{item.title}</h2>
+                  <p>"{item.content}"</p>
                 </div>
                 <div className='reviewer'>
-                  <img
-                    className='reviewer__photo'
-                    src={item.photo}
-                    alt='reviewer'
-                  />
+                  {item.photo}
                   <p>
-                    <span>
-                    {item.clientName}
-                    </span>
+                    <span>{item.clientName}</span>
                     {item.job}
                   </p>
                 </div>

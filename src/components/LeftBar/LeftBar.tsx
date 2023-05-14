@@ -1,10 +1,4 @@
-import {
-  BsFacebook,
-  BsInstagram,
-  BsLinkedin,
-  BsTwitter,
-  BsYoutube,
-} from 'react-icons/bs'
+
 import SideBarPhoto from './../../assets/images/sidebar-photo.png'
 import OneInfo from '../OneInfo/OneInfo'
 import ProgressBar from '../ProgressBar/ProgressBar'
@@ -14,10 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../../store/index'
 import useWindowSize from '../../hooks/useWindowSize'
 import { addItems, CounterState } from '../../store/user/userSlice'
-import useEffect from 'react'
-import { FaRegWindowClose } from 'react-icons/fa'
 import { closeSidebar, settingsState } from '../../store/settings/settingsSlice'
-import { width } from '@mui/system'
 import { NavLink } from 'react-router-dom'
 import LinkedinIcon from './../../assets/images/icons8-linkedin-3d-fluency-32.png'
 import FacebookIcon from './../../assets/images/icons8-facebook-circled-32.png'
@@ -61,26 +52,9 @@ const LeftBar = () => {
       <div className='left-bar'>
         <div className='person-photo-container'>
           <img src={SideBarPhoto} alt='' />
-          <h1>Rayan Adlardard</h1>
+          <h1>Abdelkader Bouzomita</h1>
 
-          <h4>Front-End Developer</h4>
-          {/* <div className='social-media-link'>
-            <a target='_blank' href='https://facebook.com'>
-            <BsFacebook />
-            </a>
-            <a target='_blank' href='https://instagram.com'>
-            <BsInstagram />
-            </a>
-            <a target='_blank' href='https://linkedin.com'>
-            <BsLinkedin />
-            </a>
-            <a target='_blank' href='https://twitter.com'>
-            <BsTwitter />
-            </a>
-            <a target='_blank' href='https://youtube.com'>
-            <BsYoutube />
-            </a>
-          </div> */}
+          <h4>Full-stack Developer</h4>
           <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
             <NavLink
               target='_blank'

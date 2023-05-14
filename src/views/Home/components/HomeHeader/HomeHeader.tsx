@@ -5,13 +5,14 @@ const HomeHeader = () => {
     <div className='home-header'>
       <div className='home__header-description'>
         <h2>
-        <strong> I'm Rayan Aldrdard </strong>
-          <span>Front-end </span>Developer
+          <strong> I'm Abdelakder</strong><br />
+          <span>Full-stack </span>Developer
         </h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia ad
-          molestiae porro est reprehenderit, modi aspernatur necessitatibus
-          ratione quasi iure cupiditate!
+          "Hi, I'm Abdelkader, a junior full stack developer with a passion for
+          building responsive and dynamic web applications.I am always
+          looking for new challenges and opportunities to grow my skills and
+          knowledge."
         </p>
         <div className='hire-me-button'>
           <p>

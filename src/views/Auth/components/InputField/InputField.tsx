@@ -16,7 +16,7 @@ const InputField = ({handleBlur,errorValue,classes, type, pHolderValue, labelVal
     <div className='input-field'>
       <label htmlFor=''>{labelValue}</label>
       <input onBlur={handleBlur} className={classes} type={type} placeholder={pHolderValue} onChange={handleChange} value={value} name={name} />
-     <p className="error-message">{errorValue}</p> 
+    <p className="error-message">{errorValue}</p> 
     </div>
   )
 }

@@ -1,13 +1,13 @@
 import { createSlice, current, PayloadAction } from '@reduxjs/toolkit'
 
 export interface settingsState {
-  isSidebarOpened: boolean;
+  isSidebarOpened: boolean
   isNavigationbarOpened: boolean
 }
 
 const initialState: settingsState = {
   isSidebarOpened: true,
-  isNavigationbarOpened:true
+  isNavigationbarOpened: true,
 }
 
 const settingsSlice = createSlice({
@@ -35,7 +35,13 @@ const settingsSlice = createSlice({
   },
 })
 
-export const { toggleSidebar,toggleNavigation, openSidebar,openNavigation, closeSidebar ,closeNavigation  } =
-  settingsSlice.actions
+export const {
+  toggleSidebar,
+  toggleNavigation,
+  openSidebar,
+  openNavigation,
+  closeSidebar,
+  closeNavigation,
+} = settingsSlice.actions
 
 export default settingsSlice.reducer

@@ -36,9 +36,9 @@ const RoutesProvider = () => {
           <Route
             path='/'
             element={
-              <AuthGuard>
+              // <AuthGuard>
                 <MainLayout />
-              </AuthGuard>
+              // </AuthGuard>
             }
           >
             <Route index element={<Home />} />
@@ -49,14 +49,14 @@ const RoutesProvider = () => {
             <Route path='/history' element={<Home />} />
           </Route>
           <Route path='*' element={<NotFound />} />
-          <Route
+          {/* <Route
             path='/auth/register'
             element={isAuthenticated ? <Navigate to='/' /> : <Register />}
           />
           <Route
             path='/auth/login'
             element={isAuthenticated ? <Navigate to='/' /> : <Login />}
-          />
+          /> */}
         </Routes>
         <ToastContainer
           position='top-right'

@@ -1,1 +1,1 @@
-export {default} from './HamburgerMenuTrigger'
+export { default } from "./HamburgerMenuTrigger";

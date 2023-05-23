@@ -1,9 +1,5 @@
-
-
 const SingleReview = () => {
-  return (
-    <div>SingleReview</div>
-  )
-}
+  return <div>SingleReview</div>;
+};
 
-export default SingleReview
+export default SingleReview;

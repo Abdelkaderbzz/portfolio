@@ -1,32 +1,17 @@
-
-
-
-import type { JestConfigWithTsJest } from 'ts-jest/dist/types';
-
-
-
+import type { JestConfigWithTsJest } from "ts-jest/dist/types";
 
 const config: JestConfigWithTsJest = {
+  preset: "ts-jest",
 
-  preset: 'ts-jest',
+  testEnvironment: "jsdom",
 
-  testEnvironment: 'jsdom',
+  verbose: true, // forceExit: true,
 
-  verbose: true,
+  clearMocks: true,
 
-  // forceExit: true,
+  resetMocks: true,
 
-  clearMocks: true,
-
-  resetMocks: true,
-
-  restoreMocks: true,
-
+  restoreMocks: true,
 };
 
-
-
-
 export default config;
-
-

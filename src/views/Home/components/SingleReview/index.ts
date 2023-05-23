@@ -1,1 +1,1 @@
-export {default} from './SingleReview'
+export { default } from "./SingleReview";

@@ -1,9 +1,5 @@
-
-
 const Overlay = () => {
-  return (
-    <div className="overlay"></div>
-  )
-}
+  return <div className="overlay"></div>;
+};
 
-export default Overlay
+export default Overlay;

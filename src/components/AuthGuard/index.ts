@@ -1,1 +1,1 @@
-export { default } from './AuthGuard'
+export { default } from "./AuthGuard";

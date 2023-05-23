@@ -1,4 +1,4 @@
-@import './../../../../assets/styles/abstracts/';
+@import "./../../../../assets/styles/abstracts/";
 .single-plan {
   width: 310px;
   display: flex;
@@ -7,9 +7,9 @@
   text-align: center;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  &:hover{
+  &:hover {
     transition: 0.6s;
-    transform: translate(0,-5%)  scale(1.05);
+    transform: translate(0, -5%) scale(1.05);
   }
 
   .most-popular {
@@ -27,7 +27,6 @@
     margin-top: 25px;
     font-weight: 600;
     font-size: 24px;
-
   }
   .plan-price {
     margin-top: 19px;
@@ -68,7 +67,6 @@
       p {
         font-size: 15px;
         font-weight: 400;
-
       }
     }
     .not-available {

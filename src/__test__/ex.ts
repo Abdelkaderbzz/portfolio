@@ -1,6 +1,5 @@
+const ex = (name: string) => {
+  return name.length === 0 ? "unknown" : name;
+};
 
-const ex = (name:string) => {
-  return name.length===0?"unknown":name
-}
-
-export default ex
+export default ex;

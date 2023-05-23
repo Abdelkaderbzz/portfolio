@@ -1,13 +1,13 @@
-import HamburgerMenuTrigger from '../HamburgerMenuTrigger/HamburgerMenuTrigger'
-import DotsTrigger from '../DotsTrigger/DotsTrigger'
+import HamburgerMenuTrigger from "../HamburgerMenuTrigger/HamburgerMenuTrigger";
+import DotsTrigger from "../DotsTrigger/DotsTrigger";
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div className="header">
       <HamburgerMenuTrigger />
       <DotsTrigger />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,1 +1,1 @@
-export {default} from './SinglePlan'
+export { default } from "./SinglePlan";

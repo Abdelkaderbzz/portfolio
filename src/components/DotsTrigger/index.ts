@@ -1,1 +1,1 @@
-export {default} from './DotsTrigger'
+export { default } from "./DotsTrigger";

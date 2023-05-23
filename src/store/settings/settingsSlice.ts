@@ -1,39 +1,39 @@
-import { createSlice, current, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
 
 export interface settingsState {
-  isSidebarOpened: boolean
-  isNavigationbarOpened: boolean
+  isSidebarOpened: boolean;
+  isNavigationbarOpened: boolean;
 }
 
 const initialState: settingsState = {
   isSidebarOpened: true,
   isNavigationbarOpened: true,
-}
+};
 
 const settingsSlice = createSlice({
-  name: 'settings',
+  name: "settings",
   initialState,
   reducers: {
     toggleSidebar: (state) => {
-      state.isSidebarOpened = !current(state).isSidebarOpened
+      state.isSidebarOpened = !current(state).isSidebarOpened;
     },
     openSidebar: (state) => {
-      state.isSidebarOpened = true
+      state.isSidebarOpened = true;
     },
     closeSidebar: (state) => {
-      state.isSidebarOpened = false
+      state.isSidebarOpened = false;
     },
     toggleNavigation: (state) => {
-      state.isNavigationbarOpened = !current(state).isNavigationbarOpened
+      state.isNavigationbarOpened = !current(state).isNavigationbarOpened;
     },
     openNavigation: (state) => {
-      state.isNavigationbarOpened = true
+      state.isNavigationbarOpened = true;
     },
     closeNavigation: (state) => {
-      state.isNavigationbarOpened = false
+      state.isNavigationbarOpened = false;
     },
   },
-})
+});
 
 export const {
   toggleSidebar,
@@ -42,6 +42,6 @@ export const {
   openNavigation,
   closeSidebar,
   closeNavigation,
-} = settingsSlice.actions
+} = settingsSlice.actions;
 
-export default settingsSlice.reducer
+export default settingsSlice.reducer;

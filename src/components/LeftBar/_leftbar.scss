@@ -1,6 +1,6 @@
-@import './../../assets/styles/abstracts/';
+@import "./../../assets/styles/abstracts/";
 .left-bar {
-  @media screen and (max-width:430px) {
+  @media screen and (max-width: 430px) {
     width: 100vw;
     z-index: -99;
   }
@@ -28,18 +28,18 @@
       color: $primaryGray;
     }
     // .social-media-link {
-      // display: flex;
-      // gap: 15px;
-      // a {
-      //   width: 28px;
-      //   height: 28px;
-      //   background-color: $primaryYellow;
-      //   color: black;
-      //   border-radius: 50%;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
-      // }
+    // display: flex;
+    // gap: 15px;
+    // a {
+    //   width: 28px;
+    //   height: 28px;
+    //   background-color: $primaryYellow;
+    //   color: black;
+    //   border-radius: 50%;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
     // }
   }
   .languages-skills {
@@ -50,7 +50,6 @@
     .skills {
       h2 {
         margin-bottom: 15px;
-       
       }
     }
   }

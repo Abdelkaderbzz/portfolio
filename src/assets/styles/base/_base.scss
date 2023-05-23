@@ -1,6 +1,6 @@
-@use './../abstracts/variables' as *;
-@import './../abstracts';
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800&display=swap');
+@use "./../abstracts/variables" as *;
+@import "./../abstracts";
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,12 +16,12 @@ body {
   background-color: #fff;
   color: #212121;
 }
-body.dark{
+body.dark {
   transition: all 0.4s ease-in-out;
   background-color: #2b2b2b;
   color: rgba(255, 255, 255, 0.797);
 }
-button{
+button {
   cursor: pointer;
 }
 ::-webkit-scrollbar {

@@ -1,11 +1,10 @@
-
-import {TiTickOutline} from 'react-icons/ti'
+import { TiTickOutline } from "react-icons/ti";
 const ExtraSkills = () => {
   return (
-    <div className='extra-skills'>
+    <div className="extra-skills">
       <h2>Extra Skills</h2>
       <div>
-        <TiTickOutline  className="skills-icon" />
+        <TiTickOutline className="skills-icon" />
         <span>Tailwindcss,scss</span>
       </div>
       <div>
@@ -21,7 +20,7 @@ const ExtraSkills = () => {
         <span>MongoDB,Expressjs</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ExtraSkills
+export default ExtraSkills;

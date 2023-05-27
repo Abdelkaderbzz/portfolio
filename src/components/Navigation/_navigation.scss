@@ -26,11 +26,12 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+      color: var(--text);
     }
     .active .navigation_link__content {
       height: 40px;
       width: 40px;
-      background-color: $primaryYellow;
+      background-color: var(--primaryYellow);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -51,8 +52,8 @@
   align-items: center;
 
   .rectangel {
-    background-color: $primaryblack;
-    color: $white;
+    background-color: var(--text);
+    color: var(--background);
     width: 65px;
     height: 24px;
     border-radius: 2px;
@@ -63,7 +64,7 @@
     margin-bottom: -5.2px;
   }
   svg {
-    color: $primaryblack;
+    color: var(--primaryblack);
   }
 }
 .none {

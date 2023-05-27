@@ -8,10 +8,10 @@ import { BsMask } from "react-icons/bs";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { FaCommentAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
-import useAuth from "../../store/auth/authSlice";
 import { ReactNode, useState } from "react";
-import useWindowSize from "../../hooks/useWindowSize";
 import { removeTokensFromLocalStorage } from "../../helpers/logalStorage";
+import { ToastContainer } from 'react-toastify';
+import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
 
 interface NavigationProps {
@@ -57,35 +57,17 @@ const NavigationLink = ({
 };
 
 const Navigation = () => {
-  const [theme, setTheme] = useState("light");
 
-  if (theme === "dark") {
-    document.querySelector("body")?.classList.add("dark");
-  } else {
-    document.querySelector("body")?.classList.remove("dark");
-  }
-  const { width } = useWindowSize();
   return (
     <div className="all-navigation-button">
-      {width < 1290 || (
-        <div
-          style={{ cursor: "pointer" }}
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        >
-          <BsMask />
-        </div>
-      )}
+        <ToggleTheme class="" />
       <div className="navigation__container">
         <NavigationLink
           route="/"
           icon={<RiHome2Fill className="link_logo" />}
           children={"home"}
         ></NavigationLink>
-        <NavigationLink
-          route="/service"
-          icon={<FaFileCode className="link_logo" />}
-          children={"service"}
-        ></NavigationLink>
+        
         <NavigationLink
           route="/history"
           icon={<FaUserGraduate className="link_logo" />}

@@ -1,4 +1,4 @@
-@use "./../../assets/styles/abstracts/variables" as *;
+@use './../../assets/styles/abstracts/variables' as *;
 .button--primary {
   display: flex;
   align-items: center;
@@ -6,7 +6,7 @@
   gap: 3px;
   border: none;
   outline: none;
-  background-color: $primaryYellow;
+  background-color: Navigation;
   width: 220px;
   font-weight: 500;
   height: 55px;

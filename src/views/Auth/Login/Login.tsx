@@ -2,7 +2,7 @@ import InputField from "../components/InputField/InputField";
 import AnimatedImg from "./../../../assets/images/techny-dashboard-with-user-interface-elements.gif";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { redirect, useNavigate, Navigate } from 'react-router-dom';
+import { redirect, useNavigate, Navigate } from "react-router-dom";
 import Overlay from "../../../components/Overlay/Overlay";
 import Progress from "../../../components/Progress/Progress";
 import { useSelector, useDispatch } from "react-redux";

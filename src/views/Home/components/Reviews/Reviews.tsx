@@ -123,7 +123,9 @@ const Reviews = () => {
                 <div className="reviewer">
                   {item.photo}
                   <p>
-                    <span>{item.clientName}</span>
+                    <span style={{ color: "var(--text)" }}>
+                      {item.clientName}
+                    </span>
                     {item.job}
                   </p>
                 </div>

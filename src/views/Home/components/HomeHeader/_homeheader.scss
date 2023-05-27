@@ -25,7 +25,7 @@
     line-height: 123.6%;
 
     span {
-      color: $primaryYellow;
+      color: var(--primaryYellow);
     }
   }
   p {
@@ -36,11 +36,11 @@
     line-height: 24px;
     text-transform: capitalize;
     font-feature-settings: "calt" off, "kern" off;
-    color: $primaryGray;
+    color: var(--primaryblack);
   }
   .hire-me-button {
     width: fit-content;
-    background-color: $primaryYellow;
+    background-color: var(--primaryYellow);
     border-radius: 5px;
     p {
       padding: 16px 32px;
@@ -50,7 +50,7 @@
       gap: 11px;
       font-style: normal;
       font-weight: 500;
-      color: $primaryblack;
+      color: var(--primaryblack);
     }
   }
 }

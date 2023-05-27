@@ -20,7 +20,7 @@
     line-height: 24px;
     text-align: center;
     text-transform: capitalize;
-    color: $primaryGray;
+    color: var(--primaryGray);
   }
   .cards {
     display: flex;
@@ -47,7 +47,7 @@
         margin-bottom: 23px;
         height: 70px;
         width: 74px;
-        color: $primaryYellow;
+        color: var(--primaryYellow);
       }
       h4 {
         margin-bottom: 18px;

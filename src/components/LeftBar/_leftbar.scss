@@ -1,4 +1,4 @@
-@import './../../assets/styles/abstracts/';
+@import "./../../assets/styles/abstracts/";
 .left-bar {
   @media screen and (max-width: 430px) {
     width: 100vw;
@@ -82,7 +82,7 @@
   height: 100%;
   @media only screen and (max-width: 1290px) {
     position: absolute;
-    background-color:  var(--navbarColor);
+    background-color: var(--navbarColor);
   }
 }
 .open {

@@ -1,14 +1,14 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import jwtDecode from 'jwt-decode';
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import jwtDecode from "jwt-decode";
 
-import { removeTokensFromLocalStorage } from './logalStorage';
-import { toast } from 'react-toastify';
+import { removeTokensFromLocalStorage } from "./logalStorage";
+import { toast } from "react-toastify";
 
 import {
   getTokenFromLocalStorage,
   getRefrechTokenFromLocalStorage,
   setTokenToLocalStorage,
-} from './logalStorage';
+} from "./logalStorage";
 
 export const isTokenExpired = (token: any) => {
   const decodedToken: any = jwtDecode(token);
@@ -17,20 +17,20 @@ export const isTokenExpired = (token: any) => {
 };
 
 export const headers = {
-  Accept: 'application/json',
-  'Content-Type': 'application/json',
+  Accept: "application/json",
+  "Content-Type": "application/json",
 };
 
 export const tokenAxios = axios.create({
   baseURL:
-    import.meta.env.MODE === 'production'
+    import.meta.env.MODE === "production"
       ? import.meta.env.VITE_REACT_APP_API_URL_PROD
       : import.meta.env.VITE_REACT_APP_API_URL_DEV,
 });
 
 const appAxios = axios.create({
   baseURL:
-    import.meta.env.MODE === 'production'
+    import.meta.env.MODE === "production"
       ? import.meta.env.VITE_REACT_APP_API_URL_PROD
       : import.meta.env.VITE_REACT_APP_API_URL_DEV,
 });
@@ -47,20 +47,18 @@ appAxios.interceptors.request.use(
             refrechToken,
           });
           const newToken = response?.data?.accessToken;
-          console.log(newToken)
+
           config.headers.Authorization = `Bearer ${newToken}`;
           // Update the token in the storage
           setTokenToLocalStorage(newToken);
-        } catch (error)
-        {
+        } catch (error) {
           // Handle the error (e.g., redirect to login page)
           {
-            refrechToken &&
-            removeTokensFromLocalStorage();
-            window.location.href = '/auth/login';
-            toast.info('refrech token expired login to access');
+            refrechToken && removeTokensFromLocalStorage();
+            window.location.href = "/auth/login";
+            toast.info("refrech token expired login to access");
           }
-          console.error('Failed to refresh token:', error);
+          console.error("Failed to refresh token:", error);
         }
       } else {
         // Set the token in the request headers

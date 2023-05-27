@@ -1,5 +1,5 @@
 import { FaCheck } from "react-icons/fa";
-import { GrFormClose } from "react-icons/gr";
+import { IoMdClose } from "react-icons/io";
 import { plansProps } from "../Plans/Plans";
 interface Props {
   plan: plansProps[];
@@ -28,7 +28,7 @@ const SinglePlan: React.FC<{ plan: plansProps }> = ({ plan }) => {
           plan.notAvailable.map((offer, index) => {
             return (
               <div key={index} className="single-offer not-available">
-                <GrFormClose />
+                <IoMdClose />
                 <p>{offer}</p>
               </div>
             );

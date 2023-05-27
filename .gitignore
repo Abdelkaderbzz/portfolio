@@ -9,6 +9,8 @@ lerna-debug.log*
 
 node_modules
 dist
+.env
+.husky
 dist-ssr
 *.local
 coverage
@@ -26,3 +28,5 @@ coverage
 Comp
 Counter
 __test__
+dist
+

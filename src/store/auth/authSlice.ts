@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { toast } from 'react-toastify';
-import appAxios from '../../helpers/axios';
-import { setTokensInLocalStorage } from '../../helpers/logalStorage';
-
+import { toast } from "react-toastify";
+import appAxios from "../../helpers/axios";
+import { setTokensInLocalStorage } from "../../helpers/logalStorage";
 
 export interface SignupState {
   isLoading: boolean;
@@ -30,7 +29,7 @@ export const signupUser = createAsyncThunk<
   any,
   SignupData,
   { rejectValue: any }
->('signup/signupUser', async (userData: SignupData, thunkAPI) => {
+>("signup/signupUser", async (userData: SignupData, thunkAPI) => {
   try {
     const response = await appAxios.post(`users/signup`, userData);
     return response.data;
@@ -39,7 +38,7 @@ export const signupUser = createAsyncThunk<
   }
 });
 export const loginUser = createAsyncThunk<any, LoginData, { rejectValue: any }>(
-  'login/loginUser',
+  "login/loginUser",
   async (userData: LoginData, thunkAPI) => {
     try {
       const response = await appAxios.post(`users/login`, userData);
@@ -51,7 +50,7 @@ export const loginUser = createAsyncThunk<any, LoginData, { rejectValue: any }>(
 );
 
 const signupSlice = createSlice({
-  name: 'signup',
+  name: "signup",
   initialState,
   reducers: {
     setAuth: (state, action: PayloadAction<boolean>) => {
@@ -74,7 +73,7 @@ const signupSlice = createSlice({
       })
       .addCase(signupUser.rejected, (state, { payload }) => {
         toast.error(
-          `${payload?.response?.data?.message || 'wrong credentials 😔😔😔 '}`
+          `${payload?.response?.data?.message || "wrong credentials 😔😔😔 "}`
         );
         state.isLoading = false;
       })
@@ -93,7 +92,7 @@ const signupSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
         toast.error(
-          `${payload?.response?.data?.message || 'wrong credentials 😔😔😔 '}`
+          `${payload?.response?.data?.message || "wrong credentials 😔😔😔 "}`
         );
         state.isLoading = false;
       });

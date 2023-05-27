@@ -1,24 +1,21 @@
-$background: #000;
-$text: #2b2b2b;
-
-[data-theme="dark"] {
-  $background: #2b2b2b;
-  $text: white;
+:root {
+  --background: white;
+  --text: #2b2b2b;
+  --primaryYellow: #ffb400;
+  --labelcolor: #475467;
+  --navbarColor: #fff;
+  --iconColor: #767676;
 }
-$primaryblack: #2b2b2b;
-$secondaryblack: #242526;
-$primaryYellow: #ffb400;
-$white: #f0f0f6;
-$primaryGray: #767676;
+[data-theme="dark"] {
+  --background: rgb(10, 25, 41);
+  --text: rgba(255, 255, 255, 0.81);
+  --primaryYellow: #ffb400;
+  --primaryGray: #767676;
+  --labelcolor: rgba(255, 255, 255, 0.761);
+  --navbarColor: rgba(0, 0, 0, 0.821);
+  --iconColor: #767676;
 
-$themes: (
-  light: (
-    colorText: #2b2b2b,
-    colorBackground: #fff,
-  ),
-  dark: (
-    colorText: #fafafa,
-    colorBackgroundFirst: rgb(24, 25, 26),
-    colorBackground: #242526,
-  ),
-);
+  .transition-enabled {
+    transition: none !important;
+  }
+}

@@ -10,9 +10,8 @@ import { FaCommentAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { ReactNode, useState } from "react";
 import { removeTokensFromLocalStorage } from "../../helpers/logalStorage";
-import { ToastContainer } from 'react-toastify';
-import ToggleTheme from '../ToggleTheme/ToggleTheme';
-
+import { ToastContainer } from "react-toastify";
+import ToggleTheme from "../ToggleTheme/ToggleTheme";
 
 interface NavigationProps {
   icon: string | ReactNode;
@@ -57,17 +56,16 @@ const NavigationLink = ({
 };
 
 const Navigation = () => {
-
   return (
     <div className="all-navigation-button">
-        <ToggleTheme class="" />
+      <ToggleTheme class="" />
       <div className="navigation__container">
         <NavigationLink
           route="/"
           icon={<RiHome2Fill className="link_logo" />}
           children={"home"}
         ></NavigationLink>
-        
+
         <NavigationLink
           route="/history"
           icon={<FaUserGraduate className="link_logo" />}

@@ -1,5 +1,5 @@
-import { BsMask } from 'react-icons/bs';
-import { useDarkMode } from '../../hooks/useDarkMode';
+import { BsMask } from "react-icons/bs";
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 interface ToggleThemeProps {
   class: string;
@@ -10,7 +10,7 @@ const ToggleTheme: React.FC<ToggleThemeProps> = ({ class: className }) => {
 
   return (
     <div
-      style={{ cursor: 'pointer', color: 'var(--text)' }}
+      style={{ cursor: "pointer", color: "var(--text)" }}
       onClick={() => switchTheme()}
       className={className}
     >

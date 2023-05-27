@@ -6,9 +6,7 @@ import { BsDownload } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/index";
 import useWindowSize from "../../hooks/useWindowSize";
-import {
-  settingsState,
-} from "../../store/settings/settingsSlice";
+import { settingsState } from "../../store/settings/settingsSlice";
 import { NavLink } from "react-router-dom";
 import LinkedinIcon from "./../../assets/images/icons8-linkedin-3d-fluency-32.png";
 import FacebookIcon from "./../../assets/images/icons8-facebook-circled-32.png";

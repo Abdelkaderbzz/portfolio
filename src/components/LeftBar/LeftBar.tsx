@@ -3,12 +3,10 @@ import OneInfo from "../OneInfo/OneInfo";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import ExtraSkills from "../ExtraSkills/ExtraSkills";
 import { BsDownload } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../store/index";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/index";
 import useWindowSize from "../../hooks/useWindowSize";
-import { addItems, CounterState } from "../../store/user/userSlice";
 import {
-  closeSidebar,
   settingsState,
 } from "../../store/settings/settingsSlice";
 import { NavLink } from "react-router-dom";

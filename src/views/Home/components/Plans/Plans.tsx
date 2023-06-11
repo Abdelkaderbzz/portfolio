@@ -1,4 +1,7 @@
 import SinglePlan from "../SinglePlan/SinglePlan";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from 'react';
 export interface plansProps {
   name: string;
   price: string;
@@ -65,14 +68,18 @@ const plans: plansProps[] = [
   },
 ];
 
-const Plans = () => {
+const Plans = () =>
+{
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="plans">
-      <h1 className="plans-title">Price Plans</h1>
-      <p className="plans-description">
+    <div className='plans'  >
+      <h1 className='plans-title'>Price Plans</h1>
+      <p className='plans-description'>
         asperiores tenetur ipsum incidunt! Magnam enim inventore molestias
       </p>
-      <div className="plans-cards">
+      <div className='plans-cards'>
         {plans.map((item, index) => {
           return <SinglePlan key={index} plan={item} />;
         })}

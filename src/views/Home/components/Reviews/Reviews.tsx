@@ -1,8 +1,9 @@
-import { AiFillStar } from "react-icons/ai";
-import { BsPersonCircle } from "react-icons/bs";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { AiFillStar } from 'react-icons/ai';
+import { BsPersonCircle } from 'react-icons/bs';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 interface Review {
   clientName: string;
@@ -14,60 +15,64 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    clientName: "James Gouse",
-    job: "Graphic Designer",
+    clientName: 'James Gouse',
+    job: 'Graphic Designer',
     photo: (
       <BsPersonCircle
-        style={{ width: "50px", height: "50px", opacity: "80%" }}
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
       />
     ),
     content:
-      "op notch development by a very talented team. Spot on communication and on-time delivery. Highly recommended.",
-    title: "Amazing Work",
+      'op notch development by a very talented team. Spot on communication and on-time delivery. Highly recommended.',
+    title: 'Amazing Work',
   },
   {
-    clientName: "Tiana Philips",
-    job: "Photographer",
+    clientName: 'Tiana Philips',
+    job: 'Photographer',
     photo: (
       <BsPersonCircle
-        style={{ width: "50px", height: "50px", opacity: "80%" }}
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
       />
     ),
     content:
-      "All good as always Cameron was responsive, super professional & proactive, thank you!",
-    title: "this man is incredible",
+      'All good as always Cameron was responsive, super professional & proactive, thank you!',
+    title: 'this man is incredible',
   },
   {
-    clientName: "Iyad Sebai",
-    job: "entrepreneur",
+    clientName: 'Iyad Sebai',
+    job: 'entrepreneur',
     photo: (
       <BsPersonCircle
-        style={{ width: "50px", height: "50px", opacity: "80%" }}
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
       />
     ),
     content:
-      "It was amazing working with these guys! Our project had some very tricky requirements ",
-    title: "that is awesome work",
+      'It was amazing working with these guys! Our project had some very tricky requirements ',
+    title: 'that is awesome work',
   },
   {
-    clientName: "Ayoub Jemai",
-    job: "youtuber",
+    clientName: 'Ayoub Jemai',
+    job: 'youtuber',
     photo: (
       <BsPersonCircle
-        style={{ width: "50px", height: "50px", opacity: "80%" }}
+        style={{ width: '50px', height: '50px', opacity: '80%' }}
       />
     ),
-    content: "Great coding! Fast and attentive to our needs Thank you",
-    title: "Excellent",
+    content: 'Great coding! Fast and attentive to our needs Thank you',
+    title: 'Excellent',
   },
 ];
-const Reviews = () => {
+const Reviews = () =>
+{
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
   const IconRepeat = () => {
     const icons = [];
     for (let i = 0; i < 5; i++) {
       icons.push(<AiFillStar key={i} />);
     }
-    return <div className="number-stars">{icons}</div>;
+    return <div className='number-stars'>{icons}</div>;
   };
   const settings = {
     dots: true,
@@ -77,15 +82,6 @@ const Reviews = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
-      // {
-      //   breakpoint: 1100,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 2,
-      //     infinite: true,
-      //     dots: true,
-      //   },
-      // },
       {
         breakpoint: 1100,
         settings: {
@@ -103,27 +99,30 @@ const Reviews = () => {
       },
     ],
   };
+
   return (
-    <div className="review-container">
-      <h5 className="review-title">recommendations</h5>
-      <p className="review-description">
+    <div className='review-container'>
+      <h5 className='review-title'>recommendations</h5>
+      <p className='review-description'>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam alias
         reiciendis unde fugit iure voluptatem nam.
       </p>
-      <div className="carousel-reviews">
-        <Slider {...settings}>
+      <div className='carousel-reviews'>
+        <Slider
+          {...settings}
+        >
           {reviews.map((item, index) => {
             return (
-              <div key={index} className="review-content">
-                <div className="reviewer-paragraph">
+              <div key={index} className='review-content'>
+                <div className='reviewer-paragraph'>
                   {IconRepeat()}
                   <h2>{item.title}</h2>
                   <p>"{item.content}"</p>
                 </div>
-                <div className="reviewer">
+                <div className='reviewer'>
                   {item.photo}
                   <p>
-                    <span style={{ color: "var(--text)" }}>
+                    <span style={{ color: 'var(--text)' }}>
                       {item.clientName}
                     </span>
                     {item.job}

@@ -24,9 +24,9 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-*test.tsx
+
 Comp
 Counter
-__test__
+
 dist
 

@@ -5,12 +5,12 @@ interface ProgressProps {
 
 const ProgressBar = ({ value, percentage }: ProgressProps) => {
   return (
-    <div className="progress-bar">
+    <div className='progress-bar'>
       <div>
         <p>{value}</p>
-        <span>{percentage}</span>
+        <span role='p-bar'>{percentage}</span>
       </div>
-      <div className="bar">
+      <div className='bar'>
         <div style={{ width: `${percentage} ` }}></div>
       </div>
     </div>

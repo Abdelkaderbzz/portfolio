@@ -1,23 +1,23 @@
 import { TiTickOutline } from "react-icons/ti";
 const ExtraSkills = () => {
   return (
-    <div className="extra-skills">
+    <div className='extra-skills'>
       <h2>Extra Skills</h2>
-      <div>
-        <TiTickOutline className="skills-icon" />
-        <span>Tailwindcss,scss</span>
+      <div data-testid='skill-item'>
+        <TiTickOutline data-testid='skill-icon' className='skills-icon' />
+        <span data-testid='skill-name'>Tailwindcss,scss</span>
       </div>
-      <div>
-        <TiTickOutline className="skills-icon" />
-        <span>GIT Knowledge</span>
+      <div data-testid='skill-item'>
+        <TiTickOutline data-testid='skill-icon' className='skills-icon' />
+        <span data-testid='skill-name'>GIT Knowledge</span>
       </div>
-      <div>
-        <TiTickOutline className="skills-icon" />
-        <span>Problem solving Python</span>
+      <div data-testid='skill-item'>
+        <TiTickOutline data-testid='skill-icon' className='skills-icon' />
+        <span data-testid='skill-name'>Problem solving Python</span>
       </div>
-      <div>
-        <TiTickOutline className="skills-icon" />
-        <span>MongoDB,Expressjs</span>
+      <div data-testid='skill-item'>
+        <TiTickOutline data-testid='skill-icon' className='skills-icon' />
+        <span data-testid='skill-name'>MongoDB,Expressjs</span>
       </div>
     </div>
   );

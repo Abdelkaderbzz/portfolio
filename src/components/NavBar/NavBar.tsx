@@ -4,6 +4,7 @@ import { RootState } from "../../store/index";
 import settingsSlice from "../../store/settings/settingsSlice";
 import { settingsState } from "../../store/settings/settingsSlice";
 import useWindowSize from "../../hooks/useWindowSize";
+import Backdrop from '../Backdrop/Backdrop';
 
 const NavBar = () => {
   const { isNavigationbarOpened } = useSelector<RootState, settingsState>(

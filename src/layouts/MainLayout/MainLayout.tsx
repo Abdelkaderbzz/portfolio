@@ -4,17 +4,9 @@ import LeftBar from "../../components/LeftBar";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import useWindowSize from "../../hooks/useWindowSize";
-import { RootState } from "../../store/index";
-import { settingsState } from "../../store/settings/settingsSlice";
-import { useSelector } from "react-redux";
 import Backdrop from "../../components/Backdrop/Backdrop";
-
 const MainLayout = () => {
   const { width } = useWindowSize();
-  const { isNavigationbarOpened, isSidebarOpened } = useSelector<
-    RootState,
-    settingsState
-  >((state) => state.settings);
   return (
     <>
       <div className="main-layout">

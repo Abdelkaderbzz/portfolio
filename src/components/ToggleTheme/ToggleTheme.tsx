@@ -6,7 +6,7 @@ interface ToggleThemeProps {
 }
 
 const ToggleTheme: React.FC<ToggleThemeProps> = ({ class: className }) => {
-  const { theme, switchTheme } = useDarkMode();
+  const {switchTheme } = useDarkMode();
 
   return (
     <div

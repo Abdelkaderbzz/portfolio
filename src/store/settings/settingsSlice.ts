@@ -17,20 +17,20 @@ const settingsSlice = createSlice({
     toggleSidebar: (state) => {
       state.isSidebarOpened = !current(state).isSidebarOpened;
     },
-    openSidebar: (state) => {
-      state.isSidebarOpened = true;
-    },
+    // openSidebar: (state) => {
+    //   state.isSidebarOpened = true;
+    // },
     closeSidebar: (state) => {
-      state.isSidebarOpened = false;
+      state.isSidebarOpened = true;
     },
     toggleNavigation: (state) => {
       state.isNavigationbarOpened = !current(state).isNavigationbarOpened;
     },
-    openNavigation: (state) => {
-      state.isNavigationbarOpened = true;
-    },
+    // openNavigation: (state) => {
+    //   state.isNavigationbarOpened = true;
+    // },
     closeNavigation: (state) => {
-      state.isNavigationbarOpened = false;
+      state.isNavigationbarOpened = true;
     },
   },
 });
@@ -38,8 +38,8 @@ const settingsSlice = createSlice({
 export const {
   toggleSidebar,
   toggleNavigation,
-  openSidebar,
-  openNavigation,
+  // openSidebar,
+  // openNavigation,
   closeSidebar,
   closeNavigation,
 } = settingsSlice.actions;

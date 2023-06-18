@@ -62,7 +62,7 @@ const LeftBar = () => {
             </NavLink>
             <NavLink
               target="_blank"
-              to={"https://gitlab.com/AbdelkaderBouzomita"}
+              to={"https://github.com/Abdelkaderbzz"}
             >
               <img src={GithubIcon} alt="not-found" />
             </NavLink>

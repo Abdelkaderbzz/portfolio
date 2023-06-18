@@ -3,9 +3,16 @@ import { render } from "@testing-library/react";
 
 describe("OneInfo", () =>
 {
-  it('renders the component without throwing any errors', () =>
+  it('renders info name and value correctly', () =>
   { 
-    render(<OneInfo />);
+    const infoName = 'hello';
+    const infoValue = 'Available';
+
+    const { getByText } = render(
+      <OneInfo infoName={infoName} infoValue={infoValue} />
+    );
+    expect(getByText(infoName)).toBeInTheDocument()
+    expect(getByText(infoValue)).toBeInTheDocument()
   })  
-  it('displays the correct infoName')
+
 })

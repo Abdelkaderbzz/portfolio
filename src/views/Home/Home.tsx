@@ -12,12 +12,12 @@ const Home = () => {
   
   return (
     <div className="home-page">
-      <Counter />
+      {/* <Counter /> */}
       <div>{width < 600 || <Animation />}</div>
-      {/* <HomeHeader />
+      <HomeHeader />
       <Service />
       <Plans />
-      <Reviews /> */}
+      <Reviews />
     </div>
   );
 };

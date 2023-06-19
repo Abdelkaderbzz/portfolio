@@ -17,18 +17,12 @@ const settingsSlice = createSlice({
     toggleSidebar: (state) => {
       state.isSidebarOpened = !current(state).isSidebarOpened;
     },
-    // openSidebar: (state) => {
-    //   state.isSidebarOpened = true;
-    // },
     closeSidebar: (state) => {
       state.isSidebarOpened = true;
     },
     toggleNavigation: (state) => {
       state.isNavigationbarOpened = !current(state).isNavigationbarOpened;
     },
-    // openNavigation: (state) => {
-    //   state.isNavigationbarOpened = true;
-    // },
     closeNavigation: (state) => {
       state.isNavigationbarOpened = true;
     },
@@ -38,8 +32,6 @@ const settingsSlice = createSlice({
 export const {
   toggleSidebar,
   toggleNavigation,
-  // openSidebar,
-  // openNavigation,
   closeSidebar,
   closeNavigation,
 } = settingsSlice.actions;

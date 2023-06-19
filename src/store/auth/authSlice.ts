@@ -43,7 +43,8 @@ export const loginUser = createAsyncThunk<any, LoginData, { rejectValue: any }>(
     try {
       const response = await appAxios.post(`users/login`, userData);
       return response.data;
-    } catch (error: any) {
+    } catch (error: any)
+    {
       return thunkAPI.rejectWithValue(error);
     }
   }
@@ -90,7 +91,9 @@ const signupSlice = createSlice({
 
         toast.success(`Welcome Back, ${payload?.user?.username} 🔥 `);
       })
-      .addCase(loginUser.rejected, (state, { payload }) => {
+      .addCase(loginUser.rejected, (state, { payload }) =>
+      {
+        console.log(payload)
         toast.error(
           `${payload?.response?.data?.message || "wrong credentials 😔😔😔 "}`
         );

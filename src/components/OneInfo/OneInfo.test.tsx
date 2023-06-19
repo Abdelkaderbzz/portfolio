@@ -1,18 +1,18 @@
-import OneInfo from "./OneInfo";
-import { render } from "@testing-library/react";
+import OneInfo from './OneInfo';
+import { queryByRole, render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
-describe("OneInfo", () =>
-{
-  it('renders info name and value correctly', () =>
-  { 
-    const infoName = 'hello';
+describe('OneInfo', () => {
+  test('renders info value with green color if it is "Available"', () => {
+    const infoName = 'Status';
     const infoValue = 'Available';
 
     const { getByText } = render(
       <OneInfo infoName={infoName} infoValue={infoValue} />
     );
-    expect(getByText(infoName)).toBeInTheDocument()
-    expect(getByText(infoValue)).toBeInTheDocument()
-  })  
 
-})
+    const valueElement = getByText(infoValue);
+    expect(valueElement).toBeInTheDocument();
+    expect(valueElement).toHaveStyle('color: #7EB942');
+  });
+});

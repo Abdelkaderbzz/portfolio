@@ -1,16 +1,13 @@
-import { NavLink, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { RiHome2Fill } from "react-icons/ri";
-import { FaFileCode } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
 import { RiQuillPenFill } from "react-icons/ri";
-import { BsMask } from "react-icons/bs";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { FaCommentAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { ReactNode, useState } from "react";
 import { removeTokensFromLocalStorage } from "../../helpers/logalStorage";
-import { ToastContainer } from "react-toastify";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 
 interface NavigationProps {

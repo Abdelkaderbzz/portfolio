@@ -6,7 +6,7 @@ const OneInfo = ({ infoName, infoValue }: OneInfoProps) => {
   return (
     <div className="info-item">
       <p>{infoName}:</p>
-      {infoValue == "Available" ? (
+      {infoValue === "Available" ? (
         <span style={{ color: "#7EB942" }}>{infoValue}</span>
       ) : (
         <span>{infoValue}</span>
